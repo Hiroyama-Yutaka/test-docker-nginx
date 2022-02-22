@@ -10,7 +10,11 @@ spec:
       app: nginx
   replicas: 1
   strategy: # １個で試すため
-    type: Recreate
+#    type: Recreate
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0
   template:
     metadata:
       labels:
