@@ -9,6 +9,8 @@ spec:
     matchLabels:
       app: nginx
   replicas: 1
+  strategy: # １個で試すため
+    type: Recreate
   template:
     metadata:
       labels:
