@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: pict3/test-web:0.02
+        image: pict3/test-web:0.03
         ports:
         - containerPort: 80
 ---
