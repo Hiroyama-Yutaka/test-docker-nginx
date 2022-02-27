@@ -9,8 +9,7 @@ spec:
     matchLabels:
       app: nginx
   replicas: 1
-  strategy: # １個で試すため
-#    type: Recreate
+  strategy:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 0
@@ -22,7 +21,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: pict3/test-web:0.04
+        image: pict3/test-web:0.01
         ports:
         - containerPort: 80
 ---
